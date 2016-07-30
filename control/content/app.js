@@ -16,6 +16,6 @@
   
   /* We can use angular controllers to write all the logical implementation we want inside a view. We can use several
   * buildfire apis easily like carousel, dynamic links, WYSIWYG etc.
-  * All your angular components can be used here as it is like filters, directives, factory etc.. 
+  * All your angular components can be used here as it is like filters, directives, factory etc.
   */
 })(window.angular, window.buildfire);
