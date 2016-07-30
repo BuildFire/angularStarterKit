@@ -17,8 +17,29 @@
 
 
     }])
-    .controller('WidgetHomeCtrl', function(){
+    .controller('WidgetHomeCtrl',['$scope', function($scope){
       var WidgetHome = this;
-      WidgetHome.text = "Widget Section";
-    });
+      WidgetHome.data = {};
+
+      // Visit : https://github.com/BuildFire/sdk/wiki/How-to-use-Datastore for more details
+
+      /*
+       * Go pull any previously saved data
+       * */
+
+      buildfire.datastore.get(function (err, result) {
+        if (result && result.data) {
+          WidgetHome.data = result.data;
+          $scope.$digest();
+        }
+      });
+      
+      buildfire.datastore.onUpdate(function(event){
+        if(event){
+          WidgetHome.data = event.data;
+          $scope.$digest();
+        }
+      });
+
+    }]);
 })(window.angular, window.buildfire);
