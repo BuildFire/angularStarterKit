@@ -38,6 +38,7 @@
         if(event){
           WidgetHome.data = event.data;
           $scope.$digest();
+          // Perform all re-initializations here after you data has been updated
         }
       });
 
