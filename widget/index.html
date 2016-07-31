@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html ng-app="angularStarterKitWidget">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS -->
+    <link href="../../../styles/helper.css" rel="stylesheet">
+
+    <!-- JS -->
+    <script src="../../../scripts/buildfire.js"></script>
+    <script src="../../../scripts/angular/angular.min.js"></script>
+    <script src="app.js"></script>
+</head>
+<body ng-controller="WidgetHomeCtrl as WidgetHome">
+<div>
+    <h3>Widget Section</h3>
+    My name is {{WidgetHome.data.name}}
+</div>
+</body>
+</html>
